@@ -6,6 +6,7 @@ import './DicesStyle.css'
 
 const allDiceState = {
   dice1:'',
+  isMuted1: true,
   dice2:'',
   dice3:'',
   dice4:'',
@@ -24,18 +25,31 @@ const allDiceState = {
 
 const reducer = (state, action) => {
   switch(action.type) {
-    case 'throwDices': return {
+    case 'throwDices': 
+      if(state.initialCounterValue === 0) return {
       dice1: state.dice1 = Math.floor(Math.random()*6+1),
       dice2: state.dice2 = Math.floor(Math.random()*6+1),
       dice3: state.dice3 = Math.floor(Math.random()*6+1),
       dice4: state.dice4 = Math.floor(Math.random()*6+1),
       dice5: state.dice5 = Math.floor(Math.random()*6+1),
       dice6: state.dice6 = Math.floor(Math.random()*6+1),
+      isMuted1: false,
       initialCounterValue: state.initialCounterValue + 1,
-    }
+      }
+
+      if(state.dice1 !==''){dice1: state.dice1 = Math.floor(Math.random()*6+1)}
+      if(state.dice2 !==''){dice2: state.dice2 = Math.floor(Math.random()*6+1)}
+      if(state.dice3 !==''){dice3: state.dice2 = Math.floor(Math.random()*6+1)}
+      if(state.dice4 !==''){dice4: state.dice2 = Math.floor(Math.random()*6+1)}
+      if(state.dice5 !==''){dice5: state.dice2 = Math.floor(Math.random()*6+1)}
+      if(state.dice6 !==''){dice6: state.dice2 = Math.floor(Math.random()*6+1)}
+    
 
     case 'keepDice1': return {
+      
       kept1: state.dice1,
+      dice1: '',
+      isMuted1: true,
       dice2: state.dice2,
       dice3: state.dice3,
       dice4: state.dice4,
@@ -148,7 +162,7 @@ console.log(newState.kept1)
 
 
     <div onClick={()=>dispatch({type: 'throwDices'})} className={trhowMuted ? 'muteDice throwBox' : 'throwBox'}><b>Throw Dices</b></div>
-    <div id='throw1' onClick={()=>dispatch({type: 'keepDice1'})}  className='thrownDice1'>{newState.dice1}</div>
+    <div id='throw1' onClick={()=>dispatch({type: 'keepDice1'})}  className={!newState.isMuted1 ? 'thrownDice1' : 'muteDice thrownDice1'}>{newState.dice1}</div>
     <div id='throw2' onClick={()=>dispatch({type: 'keepDice2'})}  className='thrownDice2'>{newState.dice2}</div>
     <div id='throw3' className='thrownDice3 muteDice'>{newState.dice3}</div>
     <div id='throw4' className='thrownDice4 muteDice'>{newState.dice4}</div>

@@ -9,6 +9,7 @@ import UpColumn from './UpColumn'
 import CallColumn from './CallColumn'
 import HandColumn from './HandColumn'
 import SumColumn from './SumColumn'
+import Dices from './Dices'
 
 function Main() {
   return (
@@ -26,7 +27,8 @@ function Main() {
       <HandColumn className='grid-item1'/>
       <SumColumn className='grid-item1'/>
       <p></p>
-      <NewDices className='grid-item'/>
+      {/* <NewDices className='grid-item'/> */}
+      <Dices className='grid-item'/>
    
            
       

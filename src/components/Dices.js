@@ -57,7 +57,7 @@ const throwDices = () => {
 
  
   initialCounterValue = initialCounterValue +1
-  console.log(initialCounterValue)
+ 
 }
 
 const keepDice1 = () => {
@@ -151,10 +151,12 @@ const keepDice2 = () => {
           }
 
  
-
+console.log(keptDice1, keptDice2, keptDice3, keptDice4, keptDice5, keptDice6)
 
 
   return (
+
+    
     <div className='grid-container3'>
    
     <div> </div>
