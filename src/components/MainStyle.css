@@ -1,0 +1,45 @@
+.title {
+    color: rgb(13, 13, 110);
+    font-family: Calibri;
+    font-size: 300%;
+    position: relative;
+    left: -30%;
+    margin: 10px;
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 3% 30%;
+    grid-template-rows: auto;
+    grid-gap: 2px;
+    
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-rows: repeat(18, 30px);
+   
+           
+}
+
+.cellBorder {
+border: 2px solid black;
+height: 30px;
+font-size: 125%;
+border-radius: 5px;
+}
+
+.sumSpacing {
+visibility: hidden;
+}
+
+
+.clickable:hover {background-color: yellow}
+
+.sumBackground{
+    background-color: rgb(49, 168, 156)
+}
+

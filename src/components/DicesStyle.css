@@ -1,0 +1,55 @@
+.grid-container3{
+    display: grid;
+    grid-template-columns: 25% 12% 12% 12% 12% 12% 12%;
+    grid-template-rows:30% 14% 14%;
+    
+}
+
+
+.throwBox, .thrownDice1, .thrownDice2, .thrownDice3, .thrownDice4, .thrownDice5, .thrownDice6,
+.keepBox, .keptDice1, .keptDice2, .keptDice3, .keptDice4, .keptDice5, .keptDice6{
+color:rgb(4, 4, 35);
+background-color: rgb(124, 97, 243);
+width: 100px;
+font-size: 135%;
+border: 1px solid rgb(2, 27, 2);
+margin: 2px;
+height: 65px;
+border-radius: 5px;
+border-color: aliceblue;
+text-align: center;
+}
+.throwBox:hover { background-color: yellow }
+.thrownDice1:hover { background-color: yellow }
+.thrownDice2:hover { background-color: yellow }
+.thrownDice3:hover { background-color: yellow }
+.thrownDice4:hover { background-color: yellow }
+.thrownDice5:hover { background-color: yellow }
+.thrownDice6:hover { background-color: yellow }
+.keptDice1:hover { background-color: yellow }
+.keptDice2:hover { background-color: yellow }
+.keptDice3:hover { background-color: yellow }
+.keptDice4:hover { background-color: yellow }
+.keptDice5:hover { background-color: yellow }
+.keptDice6:hover { background-color: yellow }
+
+.thrownDice1, .thrownDice2, .thrownDice3, .thrownDice4, .thrownDice5, .thrownDice6,
+.keptDice1, .keptDice2, .keptDice3, .keptDice4, .keptDice5, .keptDice6{
+width: 55px;
+font-size: 300%;
+}
+
+.muteDice{
+    pointer-events: none;
+}
+
+.throwCounter {
+    width: 55px;
+    font-size: 300%;
+    text-align: right;
+    }
+
+.hideElement {
+    visibility: hidden;
+}
+
