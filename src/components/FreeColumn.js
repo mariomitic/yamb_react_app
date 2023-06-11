@@ -2,11 +2,13 @@ import React from 'react'
 import './MainStyle.css'
 
 function FreeColumn() {
+
+  
   return (
-    <div  className='grid-container2'>
-        <div>
+  
+        <div className='freeColumn'>
     <div className='cellBorder'><b>Free</b></div>
-    <div className='clickable cellBorder'><b> </b></div>
+    <div className={'cellBorder cellBorder'}><b>1F</b></div>
     <div className='clickable cellBorder'><b> </b></div>
     <div className='clickable cellBorder'><b> </b></div>
     <div className='clickable cellBorder'><b> </b></div>
@@ -24,7 +26,7 @@ function FreeColumn() {
     <div className='sumBackground cellBorder'><b></b></div>
         </div>
 
-    </div>
+   
   )
 }
 

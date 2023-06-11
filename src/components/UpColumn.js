@@ -3,8 +3,8 @@ import './MainStyle.css'
 
 function UpColumn() {
   return (
-    <div  className='grid-container2'>
-        <div>
+   
+        <div className='upColumn'>
     <div className='cellBorder'><b>Up</b></div>
     <div className='clickable cellBorder'><b> </b></div>
     <div className='clickable cellBorder'><b> </b></div>
@@ -24,7 +24,7 @@ function UpColumn() {
     <div className='sumBackground cellBorder'><b></b></div>
         </div>
 
-    </div>
+    
   )
 }
 

@@ -2,9 +2,12 @@ import React from 'react'
 import './MainStyle.css'
 
 function DownColumn() {
+
+
+
   return (
-    <div  className='grid-container2'>
-        <div>
+    <div>
+        <div className='sumColumn'>
         <div className='sumSpacing cellBorder'></div>
         <div className='sumSpacing cellBorder'></div>
         <div className='sumSpacing cellBorder'></div>

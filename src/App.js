@@ -1,12 +1,17 @@
-
 import './App.css';
-import Main from './components/Main';
+import './components/MainStyle.css'
+import Dices from './components/Dices'
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
   return (
-    <div className="App">
-<Main />
+    <Provider store={store} >
+    <div className='App grid-container'>
+      <div className='title'>Yamb Game</div>
+      <Dices />
     </div>
+    </Provider>
   );
 }
 

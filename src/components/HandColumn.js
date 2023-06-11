@@ -3,8 +3,8 @@ import './MainStyle.css'
 
 function HandColumn() {
   return (
-    <div  className='grid-container2'>
-        <div>
+  
+        <div className='handColumn'>
     <div className='cellBorder'><b>Hand</b></div>
     <div className='clickable cellBorder'><b> </b></div>
     <div className='clickable cellBorder'><b> </b></div>
@@ -24,7 +24,7 @@ function HandColumn() {
     <div className='sumBackground cellBorder'><b></b></div>
         </div>
 
-    </div>
+ 
   )
 }
 
