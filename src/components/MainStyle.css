@@ -7,26 +7,70 @@
     margin: 10px;
 
 }
-
-.grid-container{
-    display: grid;
-    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 3% 30%;
-    grid-template-rows: auto;
-    grid-gap: 2px;
-    
+.title{
+    display: flex;
+    position: absolute;  
+    top: 15px;
+    left: 175px;
 }
 
-.grid-container2{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-rows: repeat(18, 30px);
-   
-           
+.memoTable, .downColumn, .freeColumn, .upColumn, .callColumn, .handColumn, .sumColumn{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 75px;
+    top: 100px;
 }
+
+.memoTable{
+    left: 70px;
+}
+.downColumn{
+    left: 150px;
+}
+.freeColumn{
+    left:230px
+}
+.upColumn{
+    left: 310px;
+}
+.callColumn{
+    left: 390px;
+}
+.handColumn{
+    left: 470px;
+}
+.sumColumn{
+    left: 550px;
+}
+
+.dicesThrow{
+    display: flex;
+    position: absolute;  
+    top: 300px;
+    left: 650px;
+}
+
+.dicesKeep{
+    display: flex;
+    position: absolute;  
+    top: 375px;
+    left: 650px;
+}
+
+.countThrow{
+    display: flex;
+    position: absolute;  
+    top: 235px;
+    left: 695px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+
 
 .cellBorder {
 border: 2px solid black;
+margin: 2px;
 height: 30px;
 font-size: 125%;
 border-radius: 5px;
@@ -37,9 +81,187 @@ visibility: hidden;
 }
 
 
-.clickable:hover {background-color: yellow}
+.clickable:hover {
+    background-color: yellow;
+    transform: scale(1.15);
+
+  }
 
 .sumBackground{
     background-color: rgb(49, 168, 156)
 }
+
+
+
+
+.throwBox, .thrownDice1, .thrownDice2, .thrownDice3, .thrownDice4, .thrownDice5, .thrownDice6,
+.keepBox, .keptDice1, .keptDice2, .keptDice3, .keptDice4, .keptDice5, .keptDice6{
+color:rgb(4, 4, 35);
+background-color: rgb(124, 97, 243);
+width: 100px;
+font-size: 135%;
+border: 1px solid rgb(2, 27, 2);
+margin: 2px;
+height: 65px;
+border-radius: 5px;
+border-color: aliceblue;
+text-align: center;
+}
+.throwBox:hover { background-color: yellow }
+.thrownDice1:hover { background-color: yellow }
+.thrownDice2:hover { background-color: yellow }
+.thrownDice3:hover { background-color: yellow }
+.thrownDice4:hover { background-color: yellow }
+.thrownDice5:hover { background-color: yellow }
+.thrownDice6:hover { background-color: yellow }
+.keptDice1:hover { background-color: yellow }
+.keptDice2:hover { background-color: yellow }
+.keptDice3:hover { background-color: yellow }
+.keptDice4:hover { background-color: yellow }
+.keptDice5:hover { background-color: yellow }
+.keptDice6:hover { background-color: yellow }
+
+.thrownDice1, .thrownDice2, .thrownDice3, .thrownDice4, .thrownDice5, .thrownDice6,
+.keptDice1, .keptDice2, .keptDice3, .keptDice4, .keptDice5, .keptDice6{
+width: 55px;
+font-size: 300%;
+}
+
+.muteDice{
+    pointer-events: none;
+}
+
+.muted{
+    pointer-events: none;
+}
+
+.temporarilyMuted{
+    pointer-events: none;
+}
+
+
+
+.throwCounter {
+    width: 55px;
+    font-size: 300%;
+    text-align: right;
+    }
+
+.hideElement {
+    visibility: hidden;
+}
+
+.turnRed{
+    color: red;
+}
+
+.calledCell {
+    background-color: yellow;
+    transform: scale(1.15);
+}
+
+.bluredBackground {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.rules_btn{
+
+    position: fixed;
+    top: 55px;
+    left: 425px;
+    background-color:  rgb(124, 97, 243);
+    border: 2px solid;
+    border-color: aliceblue;
+    border-radius: 5px;
+}
+
+.rules_btn:hover{
+    background-color: yellow;
+}
+
+.popuptext{
+    z-index: 2;
+    border: 2px solid;
+    border-color: aliceblue;
+    opacity: 1;
+    position: fixed;
+    border-radius: 10px;
+    width: 650px;
+    height: 650px;;
+    top: 50px;
+    left: 415px;
+    background-color:  rgb(124, 97, 243);
+    text-align: center;
+    
+}
+
+.rulesTitle {
+    color: greenyellow;
+}
+
+
+.close_btn{
+    position: fixed;
+    left: 1017px;
+    top: 50px;
+    border-radius: 10px;
+    background-color:  rgb(124, 97, 243);
+    border: 2px solid;
+    border-color: aliceblue;
+}
+
+.close_btn:hover{
+    background-color: rgb(156, 58, 58);
+}
+
+
+.diceAlert{
+    z-index: 2;
+    border: 2px solid;
+    border-color: aliceblue;
+    opacity: 1;
+    position: fixed;
+    border-radius: 10px;
+    width: 350px;
+    height: 150px;;
+    top: 300px;
+    left: 415px;
+    background-color:  rgb(243, 97, 116);
+    text-align: center;
+}
+
+
+.ok_btn{
+    border: 2px solid;
+    border-color: aliceblue;
+    padding: 10px 15px;
+    background-color:  rgb(124, 97, 243);
+    border-radius: 10px;
+}
+
+.ok_btn:hover{
+    background-color: yellow;
+}
+
+.freezeBackground {
+     pointer-events: none;
+}
+
+.endGame{
+    z-index: 2;
+    border: 2px solid;
+    border-color: aliceblue;
+    opacity: 1;
+    position: fixed;
+    border-radius: 5px;
+    width: 350px;
+    height: 185px;;
+    top: 300px;
+    left: 415px;
+    background-color:  rgb(124, 97, 243);
+    text-align: center;
+}
+
+
 

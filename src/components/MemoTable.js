@@ -3,8 +3,8 @@ import './MainStyle.css'
 
 function MemoTable() {
   return (
-    <div  className='grid-container2'>
-        <div>
+    
+        <div className='memoTable'>
     <div className='cellBorder'><b>Game</b></div>
     <div className='cellBorder'><b>1</b></div>
     <div className='cellBorder'><b>2</b></div>
@@ -24,7 +24,7 @@ function MemoTable() {
     <div className='sumBackground cellBorder'><b>Sum</b></div>
         </div>
 
-    </div>
+    
   )
 }
 
